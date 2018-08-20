@@ -1,0 +1,7 @@
+name: container
+title: Container Runtime Check
+maintainer: Thoughtworks
+copyright: Thoughtworks
+license: MIT
+summary: Verify that the Hello GHC container is running
+version: 1.0.0

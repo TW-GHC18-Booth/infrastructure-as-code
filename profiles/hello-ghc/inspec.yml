@@ -1,0 +1,7 @@
+name: hello-ghc
+title: Hello GHC Web Page
+maintainer: Thoughtworks
+copyright: Thoughtworks
+license: MIT
+summary: Verify that Hello GHC Web Page Exists
+version: 1.0.0
