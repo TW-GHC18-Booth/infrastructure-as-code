@@ -30,7 +30,7 @@ It will tell you how to run everything.
    ```
    *Hint: You might need to find a command to start the container for
    the first test to pass.*
-1. There are two sets of tests under the `profile` directory.
+1. There are two sets of tests under the `profiles` directory.
     * The `container` tests check to make sure the application container
       has started.
     * The `hello-ghc` tests check that dependencies are installed and the
