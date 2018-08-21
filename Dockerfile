@@ -1,3 +1,3 @@
-FROM nginx:1.15.2-alpine
+FROM joatmon08/ghc-infra-base:latest
 
 COPY src/fonts /usr/share/nginx/html/fonts

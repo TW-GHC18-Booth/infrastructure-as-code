@@ -3,7 +3,7 @@ VERSION=latest
 NAME=test-ghc-infra-hello
 
 setup-when-online:
-	docker pull nginx:1.15.2-alpine
+	docker pull joatmon08/ghc-infra-base:latest
 
 build-and-run:
 	docker build -t $(IMAGE):$(VERSION) .
@@ -14,10 +14,10 @@ build-and-run-solution: clean
 	docker run -d -p 5000:80 --name $(NAME) $(IMAGE):$(VERSION)
 
 test-running:
-	inspec exec profiles/container
+	inspec exec tests/container
 
 test-hello-ghc:
-	inspec exec profiles/hello-ghc -t docker://$(NAME)
+	inspec exec tests/hello-ghc -t docker://$(NAME)
 
 test: clean build-and-run test-running test-hello-ghc clean
 
