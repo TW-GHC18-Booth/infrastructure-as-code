@@ -25,11 +25,11 @@ and distribute it to your friends and servers.
 1. If you are setting this up on your own laptop, see the `Dependencies to Install` section, below.
 1. Take a look at the directory structure of the repo:
     * `src` - Source files for the application to be deployed to a container
-    * `profiles`- Container and application infrastructure tests
+    * `tests`- Container and application infrastructure tests
     * `answers-no-peeking`- makefile and Dockerfile with the answers to this exercise (no peeking!)
 
 ## Getting Started and Clues!
-1. There are two sets of tests under the `profiles` directory.
+1. There are two sets of tests under the `tests` directory.
     * The `container` tests check to make sure the application container
       has started.
     * The `hello-ghc` tests check that dependencies are installed and the
