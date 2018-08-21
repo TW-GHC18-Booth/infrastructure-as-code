@@ -1,7 +1,7 @@
 FROM nginx:1.15.2-alpine
 
-COPY fonts /usr/share/nginx/html/fonts
+COPY src/fonts /usr/share/nginx/html/fonts
 
-COPY images /usr/share/nginx/html/images
+COPY src/images /usr/share/nginx/html/images
 
-COPY index.html /usr/share/nginx/html/index.html
+COPY src/index.html /usr/share/nginx/html/index.html
