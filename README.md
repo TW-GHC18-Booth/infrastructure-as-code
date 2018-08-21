@@ -37,7 +37,7 @@ and distribute it to your friends and servers.
 1. Your challenge is to make changes to two files in the root directory so that your container and application infrastructure tests pass:
     * `Dockerfile` - the 'recipe' for configuring your application in a container
     * `makefile` - defines commands to build, run and test your container 
-1. First, run the container locally and look at the web page.
+1. First, run the container locally and view the web page at `http://localhost:5000`.
    ```
    $ make build-and-run
    ```
