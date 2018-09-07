@@ -1,25 +1,36 @@
 # Thoughtworks Grace Hopper Celebration: Infrastructure-as-Code
 Exercise for Infrastructure-as-Code using Docker.
 
-## About
+## Objectives
 This is an exercise to demonstrate how one can use Docker containers
 to host a simple application and roll out a new image each time you want
 to make updates to the application.
+* Demonstrate how to deploy an application using containers
+* Demonstrate how you can test the contents of your container
 
-## Description
-You've got a static web page you want served by a web server
-that should look like the following:
+## Introduction
+Infrastructure can be pretty difficult to understand! If you've ever deployed an
+application to the cloud, what are the dependencies you need to
+install? Sometimes, there are tools that can abstract it all away.
+
+It's important to treat infrastructure as code. Here, we'll demonstrate
+what that might look like and how you can test the infrastructure itself.
+
+## Premise
+I have a simple HTML page that I should be able to access
+when I run it on my laptop.
 
 ![Image of Expected Web Page](answers-no-peeking/application_landing_page.png)
 
-However, you want to be able to:
+The tricky part is that I want to be able to:
 * Give it to your friend to run on their laptop.
 * Run it on a public cloud provider.
+* Run this application on a Raspberry Pi.
 
 This is where container technologies like Docker are useful!
 You can bake in all of your dependencies so no need to run
-installation commands on your terminal and be able to package
-and distribute it to your friends and servers.
+installation commands on your terminal and distribute it to
+your friends and various systems.
 
 ## Setup and Overview
 1. If you are setting this up on your own laptop, see the `Dependencies to Install` section, below.
@@ -29,12 +40,16 @@ and distribute it to your friends and servers.
     * `answers-no-peeking`- makefile and Dockerfile with the answers to this exercise (no peeking!)
 
 ## Getting Started and Clues!
+Let's do some test-driven development and run the tests first - maybe
+they'll give us some clues.
+
 1. There are two sets of tests under the `tests` directory.
     * The `container` tests check to make sure the application container
       has started.
     * The `hello-ghc` tests check that dependencies are installed and the
       application content is loaded into the container.
-1. Your challenge is to make changes to two files in the root directory so that your container and application infrastructure tests pass:
+1. Your challenge is to make changes to two files in the root
+directory so that your container and application infrastructure tests pass:
     * `Dockerfile` - the 'recipe' for configuring your application in a container
     * `makefile` - defines commands to build, run and test your container
 1. First, run the container locally and view the web page at `http://localhost:5000`.
