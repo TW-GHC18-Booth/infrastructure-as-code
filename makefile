@@ -5,7 +5,7 @@ NAME=test-ghc-infra-hello
 setup-when-online:
 	docker pull joatmon08/ghc-infra-base:latest
 
-build-and-run:
+build-and-run: clean
 	docker build -t $(IMAGE):$(VERSION) .
 	docker run -d -p 5000:80 --name $(NAME) $(IMAGE):$(VERSION)
 
