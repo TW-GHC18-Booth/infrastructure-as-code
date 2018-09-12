@@ -2,8 +2,9 @@ IMAGE=ghc-infra-hello
 VERSION=latest
 NAME=test-ghc-infra-hello
 
-setup-when-online:
+install:
 	docker pull joatmon08/ghc-infra-base:latest
+	bundle install
 
 build-and-run: clean
 	docker build -t $(IMAGE):$(VERSION) .
@@ -15,7 +16,7 @@ test-running:
 test-hello-ghc:
 	inspec exec tests/hello-ghc -t docker://$(NAME)
 
-test: clean test-running test-hello-ghc clean
+test: clean build-and-run test-running test-hello-ghc clean
 
 clean:
 	docker rm -f $(NAME) || true

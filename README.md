@@ -70,4 +70,8 @@ You might find these resources helpful:
 You will need to install:
 * [Docker](https://docs.docker.com/install/)
 * [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-* Ruby Package Dependencies (`bundle install`)
+
+Then, run:
+```
+make install
+```
