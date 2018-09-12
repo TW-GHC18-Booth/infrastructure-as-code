@@ -16,7 +16,7 @@ test-running:
 test-hello-ghc:
 	inspec exec tests/hello-ghc -t docker://$(NAME)
 
-test: clean build-and-run test-running test-hello-ghc clean
+test: clean test-running test-hello-ghc clean
 
 clean:
 	docker rm -f $(NAME) || true
